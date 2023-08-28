@@ -1,5 +1,5 @@
 <template>
-  <div class="border border-gray-200 dark:border-gray-700 rounded-3xl p-8 md:mr-8">
+  <div class="border border-gray-200 dark:border-gray-700 rounded-3xl p-8">
     <h1
       class="flex font-semibold text-black items-center dark:text-dark-title-color"
     >

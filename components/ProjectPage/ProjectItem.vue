@@ -1,11 +1,11 @@
 <template>
-  <div class="p-6 group rounded-3xl hover:bg-gray-100 hover:cursor-pointer  transition hover:ease-in dark:hover:bg-dark-hover-color">
+  <NuxtLink class="p-6 group rounded-3xl hover:bg-gray-100 hover:cursor-pointer  transition hover:ease-in dark:hover:bg-dark-hover-color">
     <img
-      class="h-8 w-8 box-content border-4 border-white rounded-full outline outline-offset-4 outline-gray-100"
+      class="h-8 w-8 box-content border-4 border-white rounded-full outline outline-offset-4 outline-gray-200 dark:outline-gray-700"
       :src= props.imgUrl
       alt=""
     />
-    <h1 class="mt-7 pb-2 text-gray-600 font-semibold">{{ props.titleInput }}</h1>
+    <h1 class="mt-7 pb-2 text-gray-600 font-semibold dark:text-dark-title-color">{{ props.titleInput }}</h1>
     <p class="text-p-color text-p-style">
       {{ props.descInput }}
     </p>
@@ -24,7 +24,7 @@
       </svg>
       planetaria.tech</p
     >
-  </div>
+  </NuxtLink>
 </template>
 
 <script lang="ts" setup>

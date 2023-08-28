@@ -6,7 +6,7 @@
         you see something that piques your interest, check out the code and
         contribute if you have ideas for how it can be improved."
 />
-<div class="-ml-6 mt-8 gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
+<div class="-m-6 mt-8 gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
   <project-item 
   imgUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC0aEy_sIYq1U7pet3pMqpiPstWm4z24vuCA&usqp=CAU" 
   titleInput="Planetaria"

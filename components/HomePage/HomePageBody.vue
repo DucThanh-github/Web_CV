@@ -1,5 +1,5 @@
 <template>
-    <div class="grid grid-cols-1 gap-4 xl:grid-cols-2">
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <div class="space-y-8">
             <box-item
             inputTime="September 5, 2022"
@@ -34,7 +34,7 @@ July 14, 2022"
 
 
         </div>
-        <div class="md:ml-6 py-6 space-y-6">
+        <div class="lg:ml-6 py-6 space-y-6">
             <email-component/>
             <work/>
         </div>

@@ -1,11 +1,8 @@
 <template>
-  <div>
-    
-  </div>
   <div class="relative w-full font-semibold text-[14px] text-gray-600">
     <!-- Nav desktop -->
     <nav class="hidden md:flex justify-center relative">
-      <ul class="flex border border-gray-200 dark:border-gray-700 px-3 rounded-full shadow-xl dark:text-dark-title-color  dark:bg-dark-icon-color">
+      <ul class="flex border border-gray-200 dark:border-gray-700 px-3 rounded-full shadow-xl bg-white dark:text-dark-title-color  dark:bg-dark-icon-color">
         <li
           v-for="navItem in navList"
           :key="navItem.navTitle"
@@ -20,7 +17,7 @@
         </li>
       </ul>
       <button
-        class="absolute px-3 py-2 right-0 text-green-500 border-2 border-gray-200 dark:border-gray-700 rounded-full shadow-xl"
+        class="absolute px-3 py-2 right-0 text-green-500 border-2 border-gray-200 dark:border-gray-700 rounded-full shadow-xl bg-white dark:bg-dark-icon-color"
         @click="toggleDarkMode"
       >
         <div v-if="!isDarkMode">
@@ -62,7 +59,7 @@
     
     >
       <button
-        class="flex px-3 py-2 border border-gray-200 dark:border-gray-700 rounded-full items-center dark:text-dark-title-color"
+        class="flex px-3 py-2 border border-gray-200 dark:border-gray-700 rounded-full items-center dark:text-dark-title-color bg-white dark:bg-dark-icon-color"
         @click="toggleNavMobileMenu"
       >
         <p>Menu</p>
@@ -82,7 +79,7 @@
         </svg>
       </button>
       <button
-        class="px-3 py-2 ml-1 text-green-500 border border-gray-200 dark:border-gray-700 rounded-full shadow-xl"
+        class="px-3 py-2 ml-1 text-green-500 border border-gray-200 dark:border-gray-700 rounded-full shadow-xl bg-white dark:bg-dark-icon-color"
         @click="toggleDarkMode"
 
       >
@@ -177,7 +174,6 @@ function handleActiveNav(e: Event) {
   const useTitle =e.target.innerText
   store.handleActive(useTitle)
 }
-// isDarkMode.value = localStorage.getItem('isDarkMode')==='dark' ? true : false
 function toggleDarkMode() {
   isDarkMode.value = !isDarkMode.value
   if (isDarkMode.value) {
@@ -188,6 +184,31 @@ function toggleDarkMode() {
   localStorage.setItem('isDarkMode', 'light');
 }
 }
+onBeforeMount(()=>{
+if (localStorage.isDarkMode==='dark') {
+  isDarkMode.value = true
+  document.documentElement.classList.add('dark')}
+  else {
+    document.documentElement.classList.remove('dark')
+  isDarkMode.value = false
+
+  }
+  
+// if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+//   document.documentElement.classList.add('dark')
+// } else {
+//   document.documentElement.classList.remove('dark')
+// }
+
+// // Whenever the user explicitly chooses light mode
+// localStorage.theme = 'light'
+
+// // Whenever the user explicitly chooses dark mode
+// localStorage.theme = 'dark'
+
+// // Whenever the user explicitly chooses to respect the OS preference
+// localStorage.removeItem('theme')
+})
 
 
 </script>

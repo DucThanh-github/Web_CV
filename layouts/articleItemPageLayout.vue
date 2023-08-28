@@ -1,10 +1,10 @@
 <template>
-  <div class="overflow-x-hidden w-screen h-screen bg-gray-100 dark:bg-black">
+  <div class=" w-screen h-full bg-gray-100 dark:bg-black">
     <div
       class="relative max-w-[1216px] mx-auto bg-white md:mx-8 lg:mx-16 xl:mx-auto dark:bg-dark-background-color"
     >
       <div
-        class="justify-center items-center bg-white dark:bg-zinc-800 border border-gray-200 dark:border-gray-700 rounded-full absolute w-10 h-10 -translate-x-1/2 top-48 shadow-xl hidden lg:flex"
+        class="justify-center items-center bg-white hover:cursor-pointer hover:opacity-90 dark:bg-zinc-800 border border-gray-200 dark:border-gray-700 rounded-full absolute w-10 h-10 -translate-x-1/2 top-48 shadow-xl hidden lg:flex"
         @click="goBackWeb"
       >
         <svg
@@ -20,7 +20,9 @@
         </svg>
       </div>
       <div class="px-4 lg:px-24 md:px-8">
-        <div class="pb-32 pt-6 flex justify-between relative">
+        <div class="z-10 pb-32 pt-6 flex justify-between top-0"
+        :class="{sticky:isSticky}"
+        >
           <div class="absolute z-10">
             <NuxtLink :to="'/'">
               <img
@@ -60,6 +62,22 @@
 </template>
 
 <script lang='ts' setup>
+const isSticky = ref<boolean>(false)
+onMounted(() => {
+    let lastScrollY = 0
+  document.addEventListener("scroll", () => {
+      const currenScrollY = scrollY
+      console.log('curren',currenScrollY, 'last',lastScrollY)
+      if (currenScrollY>lastScrollY) {
+          isSticky.value = false
+        } else {
+            isSticky.value = true
+        }
+    lastScrollY = currenScrollY
+    console.log('sticky',isSticky.value)
+
+  });
+});
 function goBackWeb() {
   window.history.back();
 }

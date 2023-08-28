@@ -1,5 +1,5 @@
 <template>
-  <div class="border border-gray-200 dark:border-gray-700 rounded-3xl p-8 md:mr-8 space-y-4">
+  <div class="border border-gray-200 dark:border-gray-700 rounded-3xl p-8 space-y-4">
     <h1 class="flex items-center font-semibold text-black dark:text-dark-title-color">
       <svg
         xmlns="http://www.w3.org/2000/svg"
