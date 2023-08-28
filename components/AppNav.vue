@@ -2,16 +2,17 @@
   <div class="relative w-full font-semibold text-[14px] text-gray-600">
     <!-- Nav desktop -->
     <nav class="hidden md:flex justify-center relative">
-      <ul class="flex border border-gray-200 dark:border-gray-700 px-3 rounded-full shadow-xl bg-white dark:text-dark-title-color  dark:bg-dark-icon-color">
+      <ul
+        class="flex border border-gray-200 dark:border-gray-700 px-3 rounded-full shadow-xl bg-white dark:text-dark-title-color dark:bg-dark-icon-color"
+      >
         <li
           v-for="navItem in navList"
           :key="navItem.navTitle"
-          :class="{ 'text-green-500':navItem.statusItem }"
+          :class="{ 'text-green-500': navItem.statusItem }"
           class="px-3 py-2 hover:text-green-600"
           @click="handleActiveNav"
-          
         >
-          <NuxtLink :to = "`/${navItem.navTitle}`">
+          <NuxtLink :to="`/${navItem.navTitle}`">
             {{ navItem.navTitle }}
           </NuxtLink>
         </li>
@@ -42,7 +43,6 @@
             height="1em"
             viewBox="0 0 384 512"
             class="w-4 h-4 fill-dark-title-color"
-
           >
             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
             <path
@@ -54,10 +54,7 @@
     </nav>
 
     <!-- Nav Mobile -->
-    <nav
-      class="flex md:hidden justify-end text-xs "
-    
-    >
+    <nav class="flex md:hidden justify-end text-xs">
       <button
         class="flex px-3 py-2 border border-gray-200 dark:border-gray-700 rounded-full items-center dark:text-dark-title-color bg-white dark:bg-dark-icon-color"
         @click="toggleNavMobileMenu"
@@ -81,30 +78,29 @@
       <button
         class="px-3 py-2 ml-1 text-green-500 border border-gray-200 dark:border-gray-700 rounded-full shadow-xl bg-white dark:bg-dark-icon-color"
         @click="toggleDarkMode"
-
       >
-      <div v-if="!isDarkMode">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-4 h-4"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-          />
-        </svg>
-      </div>
+        <div v-if="!isDarkMode">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-4 h-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+            />
+          </svg>
+        </div>
         <div v-if="isDarkMode">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
             viewBox="0 0 384 512"
-            class="w-4 h-4  fill-dark-title-color"
+            class="w-4 h-4 fill-dark-title-color"
           >
             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
             <path
@@ -117,12 +113,13 @@
   </div>
   <!-- Nav Mobile menu -->
   <div
-    class="fixed left-0 right-0 top-0 bottom-0 md:hidden z-10 "
+    class="fixed left-0 right-0 top-0 bottom-0 md:hidden z-10"
     :class="{ hidden: navMobileMenu }"
   >
-    <div class="w-full h-full bg-gray-600 opacity-60 blur-2xl "
-    @click="toggleNavMobileMenu">
-    </div>
+    <div
+      class="w-full h-full bg-gray-600 opacity-60 blur-2xl"
+      @click="toggleNavMobileMenu"
+    ></div>
     <div
       class="animate-navMobileAnimated w-11/12 bg-white top-0 mt-4 mx-auto left-0 right-0 rounded-3xl absolute p-8 dark:bg-dark-icon-color"
     >
@@ -143,7 +140,9 @@
         />
       </svg>
 
-      <ul class="mt-4 divide-y divide-gray-200 dark:divide-gray-700 dark:text-dark-desc-color">
+      <ul
+        class="mt-4 divide-y divide-gray-200 dark:divide-gray-700 dark:text-dark-desc-color"
+      >
         <li
           v-for="navItem in navList"
           :key="navItem.navTitle"
@@ -161,54 +160,25 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
-import { useAppnavStore } from '../modules/stores/store.js'
+import { useAppnavStore } from "../modules/stores/store.js";
 
-const store = useAppnavStore()
-const navList = store.$state.navList
+const store = useAppnavStore();
+const navList = store.$state.navList;
 const isDarkMode = ref<boolean>();
 let navMobileMenu = ref<boolean>(true);
 function toggleNavMobileMenu() {
   navMobileMenu.value = !navMobileMenu.value;
 }
 function handleActiveNav(e: Event) {
-  const useTitle =e.target.innerText
-  store.handleActive(useTitle)
+  const useTitle = e.target.innerText;
+  store.handleActive(useTitle);
 }
 function toggleDarkMode() {
-  isDarkMode.value = !isDarkMode.value
+  isDarkMode.value = !isDarkMode.value;
   if (isDarkMode.value) {
-  document.documentElement.classList.add('dark')
-  localStorage.setItem('isDarkMode', 'dark');
-} else {
-  document.documentElement.classList.remove('dark')
-  localStorage.setItem('isDarkMode', 'light');
-}
-}
-onBeforeMount(()=>{
-if (localStorage.isDarkMode==='dark') {
-  isDarkMode.value = true
-  document.documentElement.classList.add('dark')}
-  else {
-    document.documentElement.classList.remove('dark')
-  isDarkMode.value = false
-
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
   }
-  
-// if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-//   document.documentElement.classList.add('dark')
-// } else {
-//   document.documentElement.classList.remove('dark')
-// }
-
-// // Whenever the user explicitly chooses light mode
-// localStorage.theme = 'light'
-
-// // Whenever the user explicitly chooses dark mode
-// localStorage.theme = 'dark'
-
-// // Whenever the user explicitly chooses to respect the OS preference
-// localStorage.removeItem('theme')
-})
-
-
+}
 </script>
