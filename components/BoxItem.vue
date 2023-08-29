@@ -1,18 +1,18 @@
 <template>
-  <div>
-    <NuxtLink
-    :to="props.inputLink">
-      <div
-      class=" -mx-6 md:-ml-6 p-6 box-border rounded-3xl hover:bg-gray-100 hover:cursor-pointer transition hover:ease-in dark:hover:bg-dark-hover-color"
+  <NuxtLink :to="props.inputLink">
+    <div
+      class="-mx-6 md:-ml-6 p-6 box-border rounded-3xl hover:bg-gray-100 hover:cursor-pointer transition hover:ease-in dark:hover:bg-dark-hover-color"
     >
       <span class="text-gray-500 border-l px-4 border-gray-300">{{
         props.inputTime
       }}</span>
-      <h1 class="py-8 font-semibold text-black dark:text-dark-title-color">{{ props.inputTitle }}</h1>
+      <h1 class="py-8 font-semibold text-black dark:text-dark-title-color">
+        {{ props.inputTitle }}
+      </h1>
       <p class="text-p-style text-p-color pb-8">{{ props.inputDesc }}</p>
 
       <div class="text-green-500 flex items-center">
-        <p>{{props.button}}</p>
+        <p>{{ props.button }}</p>
         <svg
           class="ml-2 fill-green-500"
           xmlns="http://www.w3.org/2000/svg"
@@ -26,10 +26,7 @@
         </svg>
       </div>
     </div>
-    </NuxtLink>
-  </div>
-    
-    
+  </NuxtLink>
 </template>
 
 <script lang="ts" setup>
@@ -38,7 +35,6 @@ const props = defineProps({
   inputTitle: String,
   inputDesc: String,
   inputLink: String,
-  button: String
+  button: String,
 });
-
 </script>

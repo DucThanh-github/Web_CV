@@ -6,24 +6,20 @@
       class="flex text-sm font-semibold text-gray-600 justify-center md:justify-start"
     >
       <li class="px-3 py-2 hover:text-green-600">
-        <NuxtLink :to="'/About'"
-        @click=onTop
-        >About</NuxtLink>
+        <NuxtLink :to="'/About'">About</NuxtLink>
+      </li>
+      <li class="px-3 py-2 hover:text-green-600">
+        <NuxtLink :to="'/Articles'">Articles</NuxtLink>
       </li>
 
       <li class="px-3 py-2 hover:text-green-600">
-        <NuxtLink :to="'/Projects'"
-        @click=onTop
-        >Projects</NuxtLink>
+        <NuxtLink :to="'/Projects'">Projects</NuxtLink>
       </li>
       <li class="px-3 py-2 hover:text-green-600">
-        <NuxtLink :to="'/Speaking'"
-        @click=onTop
-        >Speaking</NuxtLink>
+        <NuxtLink :to="'/Speaking'">Speaking</NuxtLink>
       </li>
       <li class="px-3 py-2 hover:text-green-600">
-        <NuxtLink :to="'/Uses'"
-        @click=onTop>Uses</NuxtLink>
+        <NuxtLink :to="'/Uses'">Uses</NuxtLink>
       </li>
     </ul>
     <div
@@ -33,13 +29,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-
-function onTop() {
-        window.scrollTo({
-            top: 0,
-            behavior:'smooth'
-        })
-    }
-</script>

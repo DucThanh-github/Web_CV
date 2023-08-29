@@ -51,7 +51,7 @@
   
         <ul class="max-w-fit text-p-color text-p-style space-y-4 my-8">
           <li class="group hover:text-green-500">
-            <a href="#" class="flex items-center"
+            <a href="https://twitter.com/" class="flex items-center"
               ><svg
                 class="w-4 fill-p-color group-hover:fill-green-500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@
             </a>
           </li>
           <li class="group hover:text-green-500">
-            <a href="#" class="flex items-center"
+            <a href="https://www.instagram.com/" class="flex items-center"
               ><svg
                 class="w-4 fill-p-color group-hover:fill-green-500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@
             </a>
           </li>
           <li class="group hover:text-green-500">
-            <a href="#" class="flex items-center "
+            <a href="https://github.com/" class="flex items-center "
               ><svg
                 class="w-4 fill-p-color group-hover:fill-green-500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,7 @@
             </a>
           </li>
           <li class="group hover:text-green-500">
-            <a href="#" class="flex items-center "
+            <a href="https://www.linkedin.com/" class="flex items-center "
               ><svg
                 class="w-4 fill-p-color group-hover:fill-green-500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +118,7 @@
         </ul>
   
         <div class="border-t border-gray-200 pt-8 dark:border-gray-700 dark:text-dark-title-color group hover:text-green-500">
-            <a href="#" class="flex items-center "
+            <a href="https://mail.google.com/" class="flex items-center "
               ><svg
                 class="w-4 fill-p-color group-hover:fill-green-500"
               xmlns="http://www.w3.org/2000/svg"

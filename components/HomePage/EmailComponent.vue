@@ -22,11 +22,15 @@
     </p>
 
     <div class="flex">
-      <input
-        class="grow border dark:text-dark-title-color dark:border-gray-700 p-2 rounded-md shadow-lg dark:bg-dark-icon-color"
-        type="text"
+  
+        <input
+        class="  border w-full dark:text-dark-title-color dark:border-gray-700 p-2 rounded-md shadow-lg dark:bg-dark-icon-color"
+        type="email"
+
         placeholder="Email address"
+      
       />
+      
       <button
         class="ml-4 bg-black text-white px-4 rounded-md hover:opacity-60 dark:bg-dark-icon-color"
       >

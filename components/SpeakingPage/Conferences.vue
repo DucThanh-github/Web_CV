@@ -7,6 +7,7 @@
           inputTitle="In space, no one can watch you stream — until now"
           inputDesc="A technical deep-dive into HelioStream, the real-time streaming library I wrote for transmitting live video back to Earth."
           button="Watch video"
+          inputLink="https://www.youtube.com/"
         >
         </box-item>
   
@@ -15,6 +16,7 @@
           inputTitle="Lessons learned from our first product recall"
           inputDesc="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
           button="Watch video"
+          inputLink="https://www.youtube.com/"
           >
         </box-item>
       </div>

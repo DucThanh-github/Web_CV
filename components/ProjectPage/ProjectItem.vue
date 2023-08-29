@@ -1,5 +1,7 @@
 <template>
-  <NuxtLink class="p-6 group rounded-3xl hover:bg-gray-100 hover:cursor-pointer  transition hover:ease-in dark:hover:bg-dark-hover-color">
+  <NuxtLink
+  :to="props.inputLink"
+   class="p-6 group rounded-3xl hover:bg-gray-100 hover:cursor-pointer  transition hover:ease-in dark:hover:bg-dark-hover-color">
     <img
       class="h-8 w-8 box-content border-4 border-white rounded-full outline outline-offset-4 outline-gray-200 dark:outline-gray-700"
       :src= props.imgUrl
@@ -31,7 +33,8 @@
 const props = defineProps({
   imgUrl: String,
   titleInput: String,
-  descInput: String
+  descInput: String,
+  inputLink: String,
 })
 </script>
 
